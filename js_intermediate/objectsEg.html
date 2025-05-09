@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+<p>
+  <a href="#" onmouseover="highlightBold(true)" onmouseout="highlightBold(false)">
+    On mouse over here bold words of the following paragraph will be highlighted
+  </a>
+</p>
+
+<p>
+  We have just started this section for the users 
+  (<b>beginner</b> to <b>intermediate</b>) who want to work with various JavaScript problems 
+  and write scripts online to test their JavaScript skill.
+</p>
+
+<script>
+  function highlightBold(highlight) {
+    const bolds = document.getElementsByTagName('b');
+    for (let bold of bolds) {
+      if (highlight) {
+        bold.classList.add('highlight');
+      } else {
+        bold.classList.remove('highlight');
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
